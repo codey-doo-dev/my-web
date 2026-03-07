@@ -2,7 +2,7 @@ function Services() {
   return (
     <div className="max-w-6xl mx-auto py-20">
 
-      <h1 className="text-4xl font-bold text-center mb-10">
+      <h1 className="text-4xl font-bold text-center mb-10 text-red-500">
         Services
       </h1>
 
