@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+
 function About() {
+  useEffect(()=>{
+    const title=document.tittle
+    document.title="About "
+    return()=>{
+      document.title=title
+    }
+  })
   return (
     <div className="max-w-4xl mx-auto py-20">
 
