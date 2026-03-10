@@ -6,11 +6,10 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <BrowserRouter>
+    <div className="flex flex-col h-screen justify-between">
 
         <Navbar />
 
@@ -28,7 +27,6 @@ function App() {
 
         <Footer />
 
-      </BrowserRouter>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React  from "react";
+import Button from "./Button";
 function Main() {
   return (
-    <section className="text-center py-20 bg-gray-100 ">
+    <section className="text-center py-20 ">
 
       <h1 className="text-5xl font-bold text-red-500">
         Hi, I'm a Web Developer
@@ -11,10 +12,7 @@ function Main() {
         I build websites using React and Tailwind CSS.
       </p>
 
-      <button className="mt-6 bg-black text-red-500 px-6 py-3 rounded 
-  shadow hover:shadow-lg transition transform duration-500 hover:-translate-y-1">
-  View Work
-</button>
+      <Button value="View work"/>
     </section>
   );
 }

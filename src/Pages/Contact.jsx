@@ -1,3 +1,5 @@
+import Button from "../Components/Button";
+
 function Contact() {
   return (
     <div className="max-w-xl mx-auto py-20">
@@ -14,10 +16,7 @@ function Contact() {
 
         <textarea className="border p-3 rounded" placeholder="Message"></textarea>
 
-        <button className="mt-6 bg-black text-red-500 px-6 py-3 rounded 
-  shadow hover:shadow-lg transition transform duration-500 hover:-translate-y-1">
-          Send
-        </button>
+        <Button value="Contact"/>
 
       </form>
 
