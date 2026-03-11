@@ -1,4 +1,10 @@
 function Services() {
+   useEffect(()=>{
+      const title = document. title
+      document.title="Services | My Website"
+      return()=>{
+        document.title=title
+      }})
   return (
     <div className="max-w-6xl mx-auto py-20">
 
