@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Button = (props) => {
+  
   return (
     <div>
        <button className="mt-6 bg-black text-red-500 px-6 py-3 rounded 

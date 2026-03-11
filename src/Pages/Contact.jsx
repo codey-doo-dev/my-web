@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import Button from "../Components/Button";
 
 function Contact() {
+  useEffect(()=>{
+    const title = document. title
+    document.title="Contact | My Website"
+    return()=>{
+      document.title=title
+    }
+  })
   return (
     <div className="max-w-xl mx-auto py-20">
 
