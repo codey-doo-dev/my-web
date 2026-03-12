@@ -1,12 +1,13 @@
 import Main from "../Components/Hero";
-
+import { useEffect } from "react";
 function Home() {
-   useEffect(()=>{
-      const title = document. title
-      document.title="Home | My Website"
-      return()=>{
-        document.title=title
-      }})
+   useEffect(function () {
+     const title = document.title;
+     document.title = "Home | My Website";
+     return () => {
+       document.title = title;
+     };
+   })
   return (
     <div>
       <Main />

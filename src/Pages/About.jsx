@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-
 function About() {
   useEffect(()=>{
-    const title=document.tittle
-    document.title="About "
+    const title=document.title
+    document.title="About | My Website"
     return()=>{
       document.title=title
     }
