@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Button from "../Components/Button";
-import { useEffect } from "react";
+
 function Contact() {
   useEffect(()=>{
     const title = document. title

@@ -1,12 +1,16 @@
-function Services() {
-   useEffect(()=>{
-      const title = document. title
-      document.title="Services | My Website"
-      return()=>{
-        document.title=title
-      }})
+import React, { useEffect } from 'react'
+
+const Services = () => {
+  useEffect(()=>{
+    const title = document. title
+    document.title="Services | My Website"
+    return()=>{
+      document.title=title
+    }
+  })
   return (
-    <div className="max-w-6xl mx-auto py-20">
+    <div>
+      <div className="max-w-6xl mx-auto py-20">
 
       <h1 className="text-4xl font-bold text-center mb-10 text-red-500">
         Services
@@ -32,7 +36,8 @@ function Services() {
       </div>
 
     </div>
-  );
+    </div>
+  )
 }
 
-export default Services;
+export default Services

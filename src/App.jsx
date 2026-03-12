@@ -5,7 +5,10 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
-import {  } from "./Components/Button";
+import Button from "./Components/Button";
+import Clock from "./Components/Clock";
+import ConfettiButton from "./components/ConfettiButton";
+
 import { Routes, Route } from "react-router-dom"; 
 function App() {
   return (
@@ -23,7 +26,14 @@ function App() {
 
           <Route path="/contact" element={<Contact />} />
 
+          <Route path="/clock" element={<Clock />} />
+
         </Routes>
+         <div className="flex justify-center items-center h-screen">
+      <ConfettiButton variant="gradient" size="lg">
+        Click Me 🎉
+      </ConfettiButton>
+    </div>
 
         <Footer />
 
