@@ -7,6 +7,7 @@ import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 import Button from "./Components/Button";
 import Clock from "./Components/Clock";
+import { TbBackground } from "react-icons/tb";
 import ConfettiButton from "./components/ConfettiButton";
 
 import { Routes, Route } from "react-router-dom"; 
@@ -29,11 +30,12 @@ function App() {
           <Route path="/clock" element={<Clock />} />
 
         </Routes>
+        {/*
          <div className="flex justify-center items-center h-screen">
       <ConfettiButton variant="gradient" size="lg">
         Click Me 🎉
       </ConfettiButton>
-    </div>
+    </div>*/}
 
         <Footer />
 
