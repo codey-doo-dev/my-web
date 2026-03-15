@@ -7,7 +7,7 @@ function Home() {
      return () => {
        document.title = title;
      };
-   })
+   },[]);
   return (
     <div>
       <Main />

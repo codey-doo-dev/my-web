@@ -1,6 +1,6 @@
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-
+import "./index.css"
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
@@ -13,23 +13,27 @@ import ConfettiButton from "./components/ConfettiButton";
 import { Routes, Route } from "react-router-dom"; 
 function App() {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col min-h-screen">
 
         <Navbar />
 
-        <Routes>
+        <main className="flex-grow">
 
-          <Route path="/" element={<Home />} />
+  <Routes>
 
-          <Route path="/about" element={<About />} />
+    <Route path="/" element={<Home />} />
 
-          <Route path="/services" element={<Services />} />
+    <Route path="/about" element={<About />} />
 
-          <Route path="/contact" element={<Contact />} />
+    <Route path="/services" element={<Services />} />
 
-          <Route path="/clock" element={<Clock />} />
+    <Route path="/contact" element={<Contact />} />
 
-        </Routes>
+    <Route path="/clock" element={<Clock />} />
+
+  </Routes>
+
+</main>
         {/*
          <div className="flex justify-center items-center h-screen">
       <ConfettiButton variant="gradient" size="lg">

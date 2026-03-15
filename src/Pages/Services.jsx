@@ -7,7 +7,7 @@ const Services = () => {
     return()=>{
       document.title=title
     }
-  })
+  },[]); 
   return (
     <div>
       <div className="max-w-6xl mx-auto py-20">

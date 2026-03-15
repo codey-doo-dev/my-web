@@ -8,7 +8,7 @@ function Contact() {
     return()=>{
       document.title=title
     }
-  })
+  },[]);
   return (
     <div className="max-w-xl mx-auto py-20">
 

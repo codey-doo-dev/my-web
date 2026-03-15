@@ -8,8 +8,6 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
-
-
  useEffect(() => {
     if (typeof document !== "undefined" && document.documentElement) {
       if (darkMode) {
