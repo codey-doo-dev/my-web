@@ -7,17 +7,20 @@ import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 import Button from "./Components/Button";
 import Clock from "./Components/Clock";
-import { TbBackground } from "react-icons/tb";
+import Cursor from "./Components/cursor";
+import Work from "./Components/Work"
 import ConfettiButton from "./components/ConfettiButton";
+
 
 import { Routes, Route } from "react-router-dom"; 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-
+      <Cursor/>
+ 
         <Navbar />
 
-        <main className="flex-grow">
+        <main className="flex-grow bg-black">
 
   <Routes>
 

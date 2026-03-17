@@ -2,13 +2,15 @@ import { NavLink } from "react-router-dom";
 import { CiMenuBurger } from "react-icons/ci";
 import { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
+import { WiDaySunny } from "react-icons/wi";
+import { TiWeatherNight } from "react-icons/ti";
 
 
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
- useEffect(() => {
+  useEffect(() => {
     if (typeof document !== "undefined" && document.documentElement) {
       if (darkMode) {
         document.documentElement.classList.add("dark");
@@ -20,55 +22,59 @@ function Navbar() {
     }
   }, [darkMode]);
   const link =
-    "relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full";
+    "relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full ";
 
   return (
     <div>
-    <nav className="flex justify-between items-center bg-black text-red-500 p-4">
+      <nav className="flex  justify-between md:items-center bg-black/95 text-red-500 p-4">
 
-      <h1 className="text-xl font-bold">MyPortfolio</h1>
+        <h1 className="text-xl font-bold">Portfolio</h1>
 
-      {/* Desktop menu */}
+        {/* Desktop menu */}
 
-      <div className="space-x-6  hidden sm:block">
-        <NavLink to="/" className={link}>Home</NavLink>
-        <NavLink to="/about" className={link}>About</NavLink>
-        <NavLink to="/services" className={link}>Services</NavLink>
-        <NavLink to="/contact" className={link}>Contact</NavLink>
-        <NavLink to="/clock" className={link}>Clock</NavLink>
-      </div>
+        <div className="space-x-6 transition-all duration-300 p-1 md:p-0 hidden sm:block">
+          <NavLink to="/" className={link}>Home</NavLink>
+          <NavLink to="/about" className={link}>About</NavLink>
+          <NavLink to="/services" className={link}>Services</NavLink>
+          <NavLink to="/contact" className={link}>Contact</NavLink>
+          <NavLink to="/clock" className={link}>Clock</NavLink>
+        </div>
 
-      {/*dark mode toggle*/}
 
-       <button onClick={() => setDarkMode(!darkMode)}className="border border-red-500  px-3 py-1 rounded text-red-500 hover:bg-red-500 hover:text-white transition">
-        {darkMode ?  "☀️ Day" : "🌙 Night"}</button>
+        {/* Right side controls */}
+        <div className="flex items-center gap-3">
 
-      {/* Burger icon */}
+          {/* Dark mode toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="border border-red-500 px-3 py-1 rounded text-red-500 hover:bg-red-500 hover:text-white transition"
+          >
+            {darkMode ? <TiWeatherNight /> : <WiDaySunny />}
+          </button>
 
-      <div className="sm:hidden">
-        <button onClick={()=>{
-          setOpen(!open)
-        }}>
-          <IoMenu />
+          {/* Mobile menu button */}
+          <div className="sm:hidden">
+            <button onClick={() => setOpen(!open)}>
+              <IoMenu />
+            </button>
+          </div>
 
-        </button>
+        </div>
 
-      </div>
+      </nav>
 
-    </nav>
+      {open && (
+        <div className="text-red-500 items-center flex flex-col bg-black sm:hidden">
+          <NavLink to="/" className={link}>Home</NavLink>
+          <NavLink to="/about" className={link}>About</NavLink>
+          <NavLink to="/services" className={link}>Services</NavLink>
+          <NavLink to="/contact" className={link}>Contact</NavLink>
+          <NavLink to="/clock" className={link}>Clock</NavLink>
 
-    {open && (
-      <div className="text-white flex flex-col bg-red-300 sm:hidden">
-        <NavLink to="/" className={link}>Home</NavLink>
-        <NavLink to="/about" className={link}>About</NavLink>
-        <NavLink to="/services" className={link}>Services</NavLink>
-        <NavLink to="/contact" className={link}>Contact</NavLink>
-        <NavLink to="/clock" className={link}>Clock</NavLink>
+        </div>
+      )
 
-      </div>
-    )
-
-    }
+      }
     </div>
   );
 }

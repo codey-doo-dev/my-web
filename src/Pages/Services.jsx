@@ -12,7 +12,7 @@ const Services = () => {
     <div>
       <div className="max-w-6xl mx-auto py-20">
 
-      <h1 className="text-4xl font-bold text-center mb-10 text-red-500">
+      <h1 className="text-4xl font-bold text-center mb-10 text-red-600 hover:scale-105 transition">
         Services
       </h1>
 
@@ -20,17 +20,17 @@ const Services = () => {
 
         <div className="border p-6 rounded hover:shadow-lg">
           <h2 className="text-xl font-bold">Web Design</h2>
-          <p className="text-gray-600">Modern responsive designs.</p>
+          <p className="text-gray-300">Modern responsive designs.</p>
         </div>
 
         <div className="border p-6 rounded hover:shadow-lg">
           <h2 className="text-xl font-bold">Frontend Development</h2>
-          <p className="text-gray-600">React & Tailwind projects.</p>
+          <p className="text-gray-300">React & Tailwind projects.</p>
         </div>
 
         <div className="border p-6 rounded hover:shadow-lg">
           <h2 className="text-xl font-bold">UI Design</h2>
-          <p className="text-gray-600">Clean interface design.</p>
+          <p className="text-gray-300">Clean interface design.</p>
         </div>
 
       </div>

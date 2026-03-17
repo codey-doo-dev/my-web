@@ -1,4 +1,5 @@
 import Main from "../Components/Hero";
+import About from "./About";
 import { useEffect } from "react";
 function Home() {
    useEffect(function () {
@@ -11,6 +12,7 @@ function Home() {
   return (
     <div>
       <Main />
+      <About />
     </div>
   );
 }

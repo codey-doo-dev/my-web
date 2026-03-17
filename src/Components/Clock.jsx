@@ -13,9 +13,9 @@ const Clock = () => {
 
 
   return (
-    <section className='max-w-6xl mx-auto py-20 text-center flex flex-col gap-6'>
-      <h1 className='text-red-500 font-bold text-4xl'>Clock</h1>
-      <p>{date.toLocaleTimeString()}</p>
+    <section className='max-w-6xl mx-auto py-20 text-center justify-content flex flex-col gap-6'>
+      <h1 className='text-red-600 font-bold text-4xl'>Clock</h1>
+      <p className='text-gray-300'>{date.toLocaleTimeString()}</p>
     </section>
   )
 }
